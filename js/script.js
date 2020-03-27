@@ -24,6 +24,13 @@ function init() {
                         $('.col-md-4 h4').html(elemOptions.en);
                         $('.col-md-4 #cases').html("Cases: " + elemOptions.cases);
                         $('#deaths').html("Deaths: " + elemOptions.deaths);
+                        $('#videos').empty(); // need to clear out previous links
+                        if (country_videos[id]) {
+                            $.each(country_videos[id], function(index, value) {
+                                $('#videos').append("<li><a href=" + value + ">link " + (index + 1) + "</a></li>");
+                                console.log(value);
+                            })
+                        }
                         console.log(id);
                     }
                 }
@@ -33,11 +40,12 @@ function init() {
             area: {
                 display: true,
                 title: "Confirmed cases",
+                mode: "horizontal",
                 titleAttrs: {
-                    fill: "#fafafa"
+                    fill: "#fafafa",
                 },
                 labelAttrs: {
-                    fill: "#fafafa"
+                    fill: "#fafafa",
                 },
                 slices : [
                     {
