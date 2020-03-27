@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>All About COVID-19</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js" charset="utf-8"></script>
+    <script src="js/jquery.mapael.min.js"></script>
+    <script src="js/world_countries.js"></script>
+
+    <script>
+        var data = {
+            "FR": {
+                "value": 39281415,
+                "href": "http://en.wikipedia.org/w/index.php?search=France",
+                "tooltip": {
+                    "content": "<span style=\"font-weight:bold;\">France</span><br />Population : 39281415"
+                }
+            }
+        };
+
+        $(function () {
+            $(".container").mapael({
+                map : {
+                    name : "world_countries"
+                }, 
+                areas: data
+
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container" style="width: 60%; margin: auto">
+        <div class="map">Alternative content</div>
+    </div>
+
+    
+</body>
+
+
+
+
