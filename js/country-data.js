@@ -1090,5 +1090,41 @@ var countries = {
         "jp": "北朝鮮",
         "cases": 0,
         "deaths": 0
+    },
+    "SB": {
+        "en": "Solomon Islands",
+        "jp": "ソロモン諸島",
+        "cases": 0,
+        "deaths": 0
+    },
+    "TW": {
+        "en": "Taiwan",
+        "jp": "台湾",
+        "cases": 235,
+        "deaths": 2
+    },
+    "BI": {
+        "en": "Burundi",
+        "jp": "ブルンジ",
+        "cases": 0,
+        "deaths": 0
+    },
+    "FK": {
+        "en": "Falkland Islands",
+        "jp": "フォークランド諸島",
+        "cases": 0,
+        "deaths": 0
+    },
+    "PR": {
+        "en": "Puerto Rico",
+        "jp": "プエルトリコ",
+        "cases": 0,
+        "deaths": 0
+    },
+    "FO": {
+        "en": "Faroe Islands",
+        "jp": "フェロー諸島",
+        "cases": 0,
+        "deaths": 0
     }
 };

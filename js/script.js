@@ -6,6 +6,9 @@ function init() {
     $(".mapcontainer-world").mapael({
         map : {
             name : "world_countries",
+            zoom: {
+                enabled: true
+            },
             defaultArea: {
                 attrs: {
                     cursor: "pointer"
