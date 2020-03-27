@@ -45,43 +45,7 @@
     <script src="js/world_countries.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
-    <script>
-        let gData;
-        var data = {
-            "FR": {
-                "value": 39281415,
-                "href": "http://en.wikipedia.org/w/index.php?search=France",
-                "tooltip": {
-                    "content": "<span style=\"font-weight:bold;\">France</span><br />Population : 39281415"
-                }
-            }
-        };
-
-        $(function () {
-            $(".mapcontainer").mapael({
-                map : {
-                    name : "world_countries",
-                    defaultArea: {
-                        attrs: {
-                            stroke: "#fff",
-                            "stroke-width": 1
-                        },
-                        attrsHover: {
-                            "stroke-width": 2
-                        }
-                    }
-                }, 
-                areas: data
-
-            });
-            $.getJSON("data/basic-data.json", function(data) {
-                gData = data;
-            });
-            $("#txt").text(gData["countries"]["Japan"]["cases"]);
-        });
-        
-    </script>
+    <script src="js/script.js"></script>
 </head>
 
 <body>
@@ -98,7 +62,7 @@
         </div>
     </div>
     <div id="txt">
-
+        
     </div>
     
     
