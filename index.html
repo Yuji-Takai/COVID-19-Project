@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <style type="text/css">
         body {
-            color: #5d5d5d;
             font-family: Helvetica, Arial, sans-serif;
         }
 
@@ -26,15 +25,19 @@
         .mapael .mapTooltip {
             position: absolute;
             background-color: #fff;
-            /* moz-opacity: 0.70; */
-            /* opacity: 0.70; */
-            /* filter: alpha(opacity=70); */
             border-radius: 10px;
             padding: 10px;
             z-index: 1000;
             max-width: 200px;
             display: none;
-            color: #343434;
+        }
+
+        .mapael .map {
+            background-color: #242a3c;
+        }
+
+        .col-md-4 {
+            color: #fafafa
         }
     </style>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -45,24 +48,25 @@
     <script src="js/world_countries.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="js/country-data.js"></script>
     <script src="js/script.js"></script>
 </head>
 
-<body>
+<body style="background-color: #061a2b;">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-8" style="margin: auto">
-                <div class="mapcontainer">
+                <div class="mapcontainer-world">
                     <div class="map">Alternative content</div>
+                    <div class="areaLegend"></div>
                 </div>
             </div>
             <div class="col-md-4" width="20%" style="padding-left: 5%">
-                <p>Text </p>
+                <h4 id="countryName"></h4>
+                <p id="cases"></p>
+                <p id="deaths"></p>
             </div>
         </div>
-    </div>
-    <div id="txt">
-        
     </div>
     
     
