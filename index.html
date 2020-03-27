@@ -36,9 +36,6 @@
             display: none;
             color: #343434;
         }
-        .col-md {
-            border: 5px solid salmon;
-        }
     </style>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
@@ -80,8 +77,8 @@
             });
             $.getJSON("data/basic-data.json", function(data) {
                 gData = data;
-                $("#txt").text(gData["countries"]["Japan"]["cases"]);
             });
+            $("#txt").text(gData["countries"]["Japan"]["cases"]);
         });
         
     </script>
@@ -90,7 +87,7 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-8" style="margin: auto; border-right: 5px solid #343434">
+            <div class="col-md-8" style="margin: auto">
                 <div class="mapcontainer">
                     <div class="map">Alternative content</div>
                 </div>
