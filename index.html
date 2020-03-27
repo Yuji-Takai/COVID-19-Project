@@ -15,18 +15,13 @@
             margin-top: 50px;
         }
 
-        .container {
-            max-width: 800px;
-            margin: auto;
-        }
-
         /* Specific mapael css class are below
          * 'mapael' class is added by plugin
         */
 
-        .mapael .map {
+        /* .mapael .map {
             position: relative;
-        }
+        } */
 
         .mapael .mapTooltip {
             position: absolute;
@@ -41,14 +36,21 @@
             display: none;
             color: #343434;
         }
+        .col-md {
+            border: 5px solid salmon;
+        }
     </style>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js" charset="utf-8"></script>
     <script src="js/jquery.mapael.min.js"></script>
     <script src="js/world_countries.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
     <script>
+        let gData;
         var data = {
             "FR": {
                 "value": 39281415,
@@ -60,7 +62,7 @@
         };
 
         $(function () {
-            $(".container").mapael({
+            $(".mapcontainer").mapael({
                 map : {
                     name : "world_countries",
                     defaultArea: {
@@ -76,15 +78,32 @@
                 areas: data
 
             });
+            $.getJSON("data/basic-data.json", function(data) {
+                gData = data;
+                $("#txt").text(gData["countries"]["Japan"]["cases"]);
+            });
         });
+        
     </script>
 </head>
 
 <body>
-    <div class="container" style="width: 60%; margin: auto">
-        <div class="map">Alternative content</div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8" style="margin: auto; border-right: 5px solid #343434">
+                <div class="mapcontainer">
+                    <div class="map">Alternative content</div>
+                </div>
+            </div>
+            <div class="col-md-4" width="20%" style="padding-left: 5%">
+                <p>Text </p>
+            </div>
+        </div>
     </div>
+    <div id="txt">
 
+    </div>
+    
     
 </body>
 

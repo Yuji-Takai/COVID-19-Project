@@ -1,0 +1,9 @@
+{
+    "countries": {
+        "Japan": {
+            "cases": 1000,
+            "deaths": 50,
+            "urls": ["https://www.youtube.com/watch?v=gs3wR39tI3Q", "https://www.youtube.com/watch?v=gs3wR39tI3Q"]
+        }
+    }
+}
