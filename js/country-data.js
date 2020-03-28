@@ -1,1130 +1,766 @@
 var countries = {
     "CN": {
         "en": "China",
-        "jp": "中国",
-        "cases": 81285,
-        "deaths": 3287
+        "jp": "中国"
     },
     "JP": {
         "en": "Japan",
-        "jp": "日本",
-        "cases": 1292,
-        "deaths": 45
+        "jp": "日本"
     },
     "KR": {
         "en": "South Korea",
-        "jp": "韓国",
-        "cases": 9241,
-        "deaths": 131
+        "jp": "韓国"
     },
     "SG": {
         "en": "Singapore",
-        "jp": "シンガポール",
-        "cases": 631,
-        "deaths": 2
+        "jp": "シンガポール"
     },
     "NP": {
         "en": "Nepal",
-        "jp": "ネパール",
-        "cases": 3,
-        "deaths": 0
+        "jp": "ネパール"
     },
     "TH": {
         "en": "Thailand",
-        "jp": "タイ",
-        "cases": 934,
-        "deaths": 4
+        "jp": "タイ"
     },
     "VN": {
         "en": "Vietnam",
-        "jp": "ベトナム",
-        "cases": 141,
-        "deaths": 0
+        "jp": "ベトナム"
     },
     "MY": {
         "en": "Malaysia",
-        "jp": "マレーシア",
-        "cases": 1796,
-        "deaths": 19
+        "jp": "マレーシア"
     },
     "AU": {
         "en": "Australia",
-        "jp": "豪州",
-        "cases": 2423,
-        "deaths": 8
+        "jp": "豪州"
     },
     "US": {
         "en": "United States",
-        "jp": "米国",
-        "cases": 65285,
-        "deaths": 1031
+        "jp": "米国"
     },
     "CA": {
         "en": "Canada",
-        "jp": "カナダ",
-        "cases": 3385,
-        "deaths": 35
+        "jp": "カナダ"
     },
     "FR": {
         "en": "France",
-        "jp": "フランス",
-        "cases": 25233,
-        "deaths": 1331
+        "jp": "フランス"
     },
     "DE": {
         "en": "Germany",
-        "jp": "ドイツ",
-        "cases": 37323,
-        "deaths": 206
+        "jp": "ドイツ"
     },
     "KH": {
         "en": "Cambodia",
-        "jp": "カンボジア",
-        "cases": 96,
-        "deaths": 0
+        "jp": "カンボジア"
     },
     "LK": {
         "en": "Sri Lanka",
-        "jp": "スリランカ",
-        "cases": 102,
-        "deaths": 0
+        "jp": "スリランカ"
     },
     "AE": {
         "en": "United Arab Emirates",
-        "jp": "アラブ首長国連邦",
-        "cases": 333,
-        "deaths": 2
+        "jp": "アラブ首長国連邦"
     },
     "FI": {
         "en": "Finland",
-        "jp": "フィンランド",
-        "cases": 880,
-        "deaths": 3
+        "jp": "フィンランド"
     },
     "PH": {
         "en": "Philippines",
-        "jp": "フィリピン",
-        "cases": 636,
-        "deaths": 38
+        "jp": "フィリピン"
     },
     "IN": {
         "en": "India",
-        "jp": "インド",
-        "cases": 657,
-        "deaths": 12
+        "jp": "インド"
     },
     "IT": {
         "en": "Italy",
-        "jp": "イタリア",
-        "cases": 74386,
-        "deaths": 7503
+        "jp": "イタリア"
     },
     "GB": {
         "en": "United Kingdom",
-        "jp": "英国",
-        "cases": 9529,
-        "deaths": 422
+        "jp": "英国"
     },
     "RU": {
         "en": "Russia",
-        "jp": "ロシア",
-        "cases": 651,
-        "deaths": 1
+        "jp": "ロシア"
     },
     "SE": {
         "en": "Sweden",
-        "jp": "スウェーデン",
-        "cases": 2510,
-        "deaths": 42
+        "jp": "スウェーデン"
     },
     "ES": {
         "en": "Spain",
-        "jp": "スペイン",
-        "cases": 49515,
-        "deaths": 3647
+        "jp": "スペイン"
     },
     "BE": {
         "en": "Belgium",
-        "jp": "ベルギー",
-        "cases": 4937,
-        "deaths": 178
+        "jp": "ベルギー"
     },
     "EG": {
         "en": "Egypt",
-        "jp": "エジプト",
-        "cases": 456,
-        "deaths": 21
+        "jp": "エジプト"
     },
     "IR": {
         "en": "Iran",
-        "jp": "イラン",
-        "cases": 27017,
-        "deaths": 2077
+        "jp": "イラン"
     },
     "IL": {
         "en": "Israel",
-        "jp": "イスラエル",
-        "cases": 2369,
-        "deaths": 3
+        "jp": "イスラエル"
     },
     "LB": {
         "en": "Lebanon",
-        "jp": "レバノン",
-        "cases": 333,
-        "deaths": 6
+        "jp": "レバノン"
     },
     "KW": {
         "en": "Kuwait",
-        "jp": "クウェート",
-        "cases": 195,
-        "deaths": 0
+        "jp": "クウェート"
     },
     "BH": {
         "en": "Bahrain",
-        "jp": "バーレーン",
-        "cases": 419,
-        "deaths": 4
+        "jp": "バーレーン"
     },
     "OM": {
         "en": "Oman",
-        "jp": "オマーン",
-        "cases": 99,
-        "deaths": 0
+        "jp": "オマーン"
     },
     "AF": {
         "en": "Afghanistan",
-        "jp": "アフガニスタン",
-        "cases": 84,
-        "deaths": 2
+        "jp": "アフガニスタン"
     },
     "IQ": {
         "en": "Iraq",
-        "jp": "イラク",
-        "cases": 346,
-        "deaths": 29
+        "jp": "イラク"
     },
     "DZ": {
         "en": "Algeria",
-        "jp": "アルジェリア",
-        "cases": 302,
-        "deaths": 21
+        "jp": "アルジェリア"
     },
     "AT": {
         "en": "Austria",
-        "jp": "オーストリア",
-        "cases": 5560,
-        "deaths": 31
+        "jp": "オーストリア"
     },
     "CH": {
         "en": "Switzerland",
-        "jp": "スイス",
-        "cases": 9765,
-        "deaths": 103
+        "jp": "スイス"
     },
     "HR": {
         "en": "Croatia",
-        "jp": "クロアチア",
-        "cases": 442,
-        "deaths": 1
+        "jp": "クロアチア"
     },
     "BR": {
         "en": "Brazil",
-        "jp": "ブラジル",
-        "cases": 2433,
-        "deaths": 57
+        "jp": "ブラジル"
     },
     "GE": {
         "en": "Georgia",
-        "jp": "ジョージア",
-        "cases": 75,
-        "deaths": 0
+        "jp": "ジョージア"
     },
     "PK": {
         "en": "Pakistan",
-        "jp": "パキスタン",
-        "cases": 1063,
-        "deaths": 8
+        "jp": "パキスタン"
     },
     "MK": {
         "en": "North Macedonia",
-        "jp": "北マケドニア",
-        "cases": 177,
-        "deaths": 3
+        "jp": "北マケドニア"
     },
     "GR": {
         "en": "Greece",
-        "jp": "ギリシア",
-        "cases": 821,
-        "deaths": 22
+        "jp": "ギリシア"
     },
     "NO": {
         "en": "Norway",
-        "jp": "ノルウェー",
-        "cases": 2916,
-        "deaths": 12
+        "jp": "ノルウェー"
     },
     "RO": {
         "en": "Romania",
-        "jp": "ルーマニア",
-        "cases": 906,
-        "deaths": 17
+        "jp": "ルーマニア"
     },
     "DK": {
         "en": "Denmark",
-        "jp": "デンマーク",
-        "cases": 1861,
-        "deaths": 34
+        "jp": "デンマーク"
     },
     "EE": {
         "en": "Estonia",
-        "jp": "エストニア",
-        "cases": 404,
-        "deaths": 0
+        "jp": "エストニア"
     },
     "NL": {
         "en": "Netherlands",
-        "jp": "オランダ",
-        "cases": 6412,
-        "deaths": 356
+        "jp": "オランダ"
     },
     "SM": {
         "en": "San Marino",
-        "jp": "サンマリノ",
-        "cases": 208,
-        "deaths": 21
+        "jp": "サンマリノ"
     },
     "LT": {
         "en": "Lithuania",
-        "jp": "リトアニア",
-        "cases": 274,
-        "deaths": 4
+        "jp": "リトアニア"
     },
     "NG": {
         "en": "Nigeria",
-        "jp": "ナイジェリア",
-        "cases": 46,
-        "deaths": 1
+        "jp": "ナイジェリア"
     },
     "IS": {
         "en": "Iceland",
-        "jp": "アイスランド",
-        "cases": 737,
-        "deaths": 2
+        "jp": "アイスランド"
     },
     "AZ": {
         "en": "Azerbaijan",
-        "jp": "アゼルバイジャン",
-        "cases": 93,
-        "deaths": 2
+        "jp": "アゼルバイジャン"
     },
     "BY": {
         "en": "Belarus",
-        "jp": "ベラルーシ",
-        "cases": 86,
-        "deaths": 0
+        "jp": "ベラルーシ"
     },
     "NZ": {
         "en": "New Zealand",
-        "jp": "ニュージーランド",
-        "cases": 205,
-        "deaths": 0
+        "jp": "ニュージーランド"
     },
     "MX": {
         "en": "Mexico",
-        "jp": "メキシコ",
-        "cases": 405,
-        "deaths": 5
+        "jp": "メキシコ"
     },
     "QA": {
         "en": "Qatar",
-        "jp": "カタール",
-        "cases": 537,
-        "deaths": 0
+        "jp": "カタール"
     },
     "LU": {
         "en": "Luxembourg",
-        "jp": "ルクセンブルク",
-        "cases": 1333,
-        "deaths": 8
+        "jp": "ルクセンブルク"
     },
     "MC": {
         "en": "Monaco",
-        "jp": "モナコ",
-        "cases": 31,
-        "deaths": 0
+        "jp": "モナコ"
     },
     "EC": {
         "en": "Ecuador",
-        "jp": "エクアドル",
-        "cases": 1173,
-        "deaths": 29
+        "jp": "エクアドル"
     },
     "IE": {
         "en": "Ireland",
-        "jp": "アイルランド",
-        "cases": 1564,
-        "deaths": 9
+        "jp": "アイルランド"
     },
     "CZ": {
-        "en": "Czech Republic",
-        "jp": "チェコ",
-        "cases": 1654,
-        "deaths": 6
+        "en": "Czechia",
+        "jp": "チェコ"
     },
     "AM": {
         "en": "Armenia",
-        "jp": "アルメニア",
-        "cases": 265,
-        "deaths": 0
+        "jp": "アルメニア"
     },
     "DO": {
         "en": "Dominican Republic",
-        "jp": "ドミニカ共和国",
-        "cases": 392,
-        "deaths": 10
+        "jp": "ドミニカ共和国"
     },
     "ID": {
         "en": "Indonesia",
-        "jp": "インドネシア",
-        "cases": 790,
-        "deaths": 58
+        "jp": "インドネシア"
     },
     "AD": {
         "en": "Andorra",
-        "jp": "アンドラ",
-        "cases": 188,
-        "deaths": 1
+        "jp": "アンドラ"
     },
     "PT": {
         "en": "Portugal",
-        "jp": "ポルトガル",
-        "cases": 2995,
-        "deaths": 43
+        "jp": "ポルトガル"
     },
     "LV": {
         "en": "Latvia",
-        "jp": "ラトビア",
-        "cases": 221,
-        "deaths": 0
+        "jp": "ラトビア"
     },
     "SN": {
         "en": "Senegal",
-        "jp": "セネガル",
-        "cases": 99,
-        "deaths": 0
+        "jp": "セネガル"
     },
     "SA": {
         "en": "Saudi Arabia",
-        "jp": "サウジアラビア",
-        "cases": 900,
-        "deaths": 2
+        "jp": "サウジアラビア"
     },
     "JO": {
         "en": "Jordan",
-        "jp": "ヨルダン",
-        "cases": 172,
-        "deaths": 0
+        "jp": "ヨルダン"
     },
     "AR": {
         "en": "Argentina",
-        "jp": "アルゼンチン",
-        "cases": 387,
-        "deaths": 8
+        "jp": "アルゼンチン"
     },
     "CL": {
         "en": "Chile",
-        "jp": "チリ",
-        "cases": 1142,
-        "deaths": 3
+        "jp": "チリ"
     },
     "UA": {
         "en": "Ukraine",
-        "jp": "ウクライナ",
-        "cases": 145,
-        "deaths": 5
+        "jp": "ウクライナ"
     },
     "MA": {
         "en": "Morocco",
-        "jp": "モロッコ",
-        "cases": 225,
-        "deaths": 6
+        "jp": "モロッコ"
     },
     "TN": {
         "en": "Tunisia",
-        "jp": "チュニジア",
-        "cases": 173,
-        "deaths": 5
+        "jp": "チュニジア"
     },
     "HU": {
         "en": "Hungary",
-        "jp": "ハンガリー",
-        "cases": 226,
-        "deaths": 10
+        "jp": "ハンガリー"
     },
     "LI": {
         "en": "Liechtenstein",
-        "jp": "リヒテンシュタイン",
-        "cases": 51,
-        "deaths": 0
+        "jp": "リヒテンシュタイン"
     },
     "PL": {
         "en": "Poland",
-        "jp": "ポーランド",
-        "cases": 1051,
-        "deaths": 14
+        "jp": "ポーランド"
     },
     "SI": {
         "en": "Slovenia",
-        "jp": "スロベニア",
-        "cases": 528,
-        "deaths": 5
+        "jp": "スロベニア"
     },
     "PS": {
         "en": "Palestine",
-        "jp": "パレスチナ",
-        "cases": 60,
-        "deaths": 0
+        "jp": "パレスチナ"
     },
     "BA": {
         "en": "Bosnia and Herzegovina",
-        "jp": "ボスニア・ヘルツェゴビナ",
-        "cases": 176,
-        "deaths": 3
+        "jp": "ボスニア・ヘルツェゴビナ"
     },
     "ZA": {
         "en": "South Africa",
-        "jp": "南アフリカ",
-        "cases": 709,
-        "deaths": 0
+        "jp": "南アフリカ"
     },
     "BT": {
         "en": "Bhutan",
-        "jp": "ブータン",
-        "cases": 2,
-        "deaths": 0
+        "jp": "ブータン"
     },
     "CM": {
         "en": "Cameroon",
-        "jp": "カメルーン",
-        "cases": 75,
-        "deaths": 1
+        "jp": "カメルーン"
     },
     "TG": {
         "en": "Togo",
-        "jp": "トーゴ",
-        "cases": 23,
-        "deaths": 0
+        "jp": "トーゴ"
     },
     "RS": {
         "en": "Serbia",
-        "jp": "セルビア",
-        "cases": 384,
-        "deaths": 4
+        "jp": "セルビア"
     },
     "SK": {
         "en": "Slovakia",
-        "jp": "スロバキア",
-        "cases": 216,
-        "deaths": 1
+        "jp": "スロバキア"
     },
     "VA": {
         "en": "Vatican",
-        "jp": "バチカン",
-        "cases": 4,
-        "deaths": 0
+        "jp": "バチカン"
     },
     "CO": {
         "en": "Colombia",
-        "jp": "コロンビア",
-        "cases": 470,
-        "deaths": 4
+        "jp": "コロンビア"
     },
     "PE": {
         "en": "Peru",
-        "jp": "ペルー",
-        "cases": 480,
-        "deaths": 9
+        "jp": "ペルー"
     },
     "CR": {
         "en": "Costa Rica",
-        "jp": "コスタリカ",
-        "cases": 201,
-        "deaths": 2
+        "jp": "コスタリカ"
     },
     "MT": {
         "en": "Malta",
-        "jp": "マルタ",
-        "cases": 129,
-        "deaths": 0
+        "jp": "マルタ"
     },
     "PY": {
         "en": "Paraguay",
-        "jp": "パラグアイ",
-        "cases": 37,
-        "deaths": 3
+        "jp": "パラグアイ"
     },
     "BD": {
         "en": "Bangladesh",
-        "jp": "バングラデシュ",
-        "cases": 39,
-        "deaths": 5
+        "jp": "バングラデシュ"
     },
     "MD": {
         "en": "Moldova",
-        "jp": "モルドバ",
-        "cases": 149,
-        "deaths": 1
+        "jp": "モルドバ"
     },
     "BG": {
         "en": "Bulgaria",
-        "jp": "ブルガリア",
-        "cases": 242,
-        "deaths": 3
+        "jp": "ブルガリア"
     },
     "MV": {
         "en": "Maldives",
-        "jp": "モルディブ",
-        "cases": 13,
-        "deaths": 0
+        "jp": "モルディブ"
     },
     "BN": {
         "en": "Brunei",
-        "jp": "ブルネイ",
-        "cases": 109,
-        "deaths": 0
+        "jp": "ブルネイ"
     },
     "CY": {
         "en": "Cyprus",
-        "jp": "キプロス",
-        "cases": 132,
-        "deaths": 3
+        "jp": "キプロス"
     },
     "AL": {
         "en": "Albania",
-        "jp": "アルバニア",
-        "cases": 146,
-        "deaths": 5
+        "jp": "アルバニア"
     },
     "BF": {
         "en": "Burkina Faso",
-        "jp": "ブルキナファソ",
-        "cases": 146,
-        "deaths": 4
+        "jp": "ブルキナファソ"
     },
     "MN": {
         "en": "Mongolia",
-        "jp": "モンゴル",
-        "cases": 10,
-        "deaths": 0
+        "jp": "モンゴル"
     },
     "PA": {
         "en": "Panama",
-        "jp": "パナマ",
-        "cases": 443,
-        "deaths": 8
+        "jp": "パナマ"
     },
     "BO": {
         "en": "Bolivia",
-        "jp": "ボリビア",
-        "cases": 32,
-        "deaths": 0
+        "jp": "ボリビア"
     },
     "HN": {
         "en": "Honduras",
-        "jp": "ホンジュラス",
-        "cases": 36,
-        "deaths": 0
+        "jp": "ホンジュラス"
     },
     "CD": {
-        "en": " Democratic Republic of the Congo",
-        "jp": "コンゴ民主共和国",
-        "cases": 48,
-        "deaths": 2
+        "en": "Democratic Republic of the Congo",
+        "jp": "コンゴ民主共和国"
     },
     "JM": {
         "en": "Jamaica",
-        "jp": "ジャマイカ",
-        "cases": 25,
-        "deaths": 1
+        "jp": "ジャマイカ"
     },
     "TR": {
         "en": "Turkey",
-        "jp": "トルコ",
-        "cases": 2433,
-        "deaths": 59
+        "jp": "トルコ"
     },
     "CI": {
         "en": "Côte d'Ivoire",
-        "jp": "コートジボワール",
-        "cases": 80,
-        "deaths": 0
+        "jp": "コートジボワール"
     },
     "GY": {
         "en": "Guyana",
-        "jp": "ガイアナ",
-        "cases": 5,
-        "deaths": 1
+        "jp": "ガイアナ"
     },
     "CU": {
         "en": "Cuba",
-        "jp": "キューバ",
-        "cases": 57,
-        "deaths": 1
+        "jp": "キューバ"
     },
     "TT": {
         "en": "Trinidad and Tobago",
-        "jp": "トリニダード・トバゴ",
-        "cases": 60,
-        "deaths": 0
+        "jp": "トリニダード・トバゴ"
     },
     "SD": {
         "en": "Sudan",
-        "jp": "スーダン",
-        "cases": 3,
-        "deaths": 1
+        "jp": "スーダン"
     },
     "GN": {
         "en": "Guinea",
-        "jp": "ギニア",
-        "cases": 4,
-        "deaths": 0
+        "jp": "ギニア"
     },
     "ET": {
         "en": "Ethiopia",
-        "jp": "エチオピア",
-        "cases": 12,
-        "deaths": 0
+        "jp": "エチオピア"
     },
     "KE": {
         "en": "Kenya",
-        "jp": "ケニア",
-        "cases": 28,
-        "deaths": 0
+        "jp": "ケニア"
     },
     "GT": {
         "en": "Guatemala",
-        "jp": "グアテマラ",
-        "cases": 24,
-        "deaths": 1
+        "jp": "グアテマラ"
     },
     "VE": {
         "en": "Venezuela",
-        "jp": "ベネズエラ",
-        "cases": 91,
-        "deaths": 0
+        "jp": "ベネズエラ"
     },
     "GA": {
         "en": "Gabon",
-        "jp": "ガボン",
-        "cases": 6,
-        "deaths": 1
+        "jp": "ガボン"
     },
     "GH": {
         "en": "Ghana",
-        "jp": "ガーナ",
-        "cases": 93,
-        "deaths": 4
+        "jp": "ガーナ"
     },
     "AG": {
         "en": "Antigua and Barbuda",
-        "jp": "アンティグア・バーブーダ",
-        "cases": 3,
-        "deaths": 0
+        "jp": "アンティグア・バーブーダ"
     },
     "KZ": {
         "en": "Kazakhstan",
-        "jp": "カザフスタン",
-        "cases": 81,
-        "deaths": 0
+        "jp": "カザフスタン"
     },
     "UY": {
         "en": "Uruguay",
-        "jp": "ウルグアイ",
-        "cases": 189,
-        "deaths": 0
+        "jp": "ウルグアイ"
     },
     "AW": {
         "en": "Aruba",
-        "jp": "アルバ",
-        "cases": 12,
-        "deaths": 0
+        "jp": "アルバ"
     },
     "NA": {
         "en": "Namibia",
-        "jp": "ナミビア",
-        "cases": 7,
-        "deaths": 0
+        "jp": "ナミビア"
     },
     "SC": {
         "en": "Seychelles",
-        "jp": "セーシェル",
-        "cases": 7,
-        "deaths": 0
+        "jp": "セーシェル"
     },
     "LC": {
         "en": "Saint Lucia",
-        "jp": "セントルシア",
-        "cases": 3,
-        "deaths": 0
+        "jp": "セントルシア"
     },
     "RW": {
         "en": "Rwanda",
-        "jp": "ルワンダ",
-        "cases": 41,
-        "deaths": 0
+        "jp": "ルワンダ"
     },
     "SZ": {
         "en": "Eswatini",
-        "jp": "エスワティニ",
-        "cases": 4,
-        "deaths": 0
+        "jp": "エスワティニ"
     },
     "CW": {
         "en": "Curacao",
-        "jp": "キュラソー",
-        "cases": 6,
-        "deaths": 1
+        "jp": "キュラソー"
     },
     "SR": {
         "en": "Suriname",
-        "jp": "スリナム",
-        "cases": 8,
-        "deaths": 0
+        "jp": "スリナム"
     },
     "MR": {
         "en": "Mauritania",
-        "jp": "モーリタニア",
-        "cases": 2,
-        "deaths": 0
+        "jp": "モーリタニア"
     },
     "CG": {
         "en": "Congo",
-        "jp": "コンゴ共和国",
-        "cases": 4,
-        "deaths": 0
+        "jp": "コンゴ共和国"
     },
     "CF": {
         "en": "Central African Republic",
-        "jp": "中央アフリカ",
-        "cases": 4,
-        "deaths": 0
+        "jp": "中央アフリカ"
     },
     "UZ": {
         "en": "Uzbekistan",
-        "jp": "ウズベキスタン",
-        "cases": 60,
-        "deaths": 0
+        "jp": "ウズベキスタン"
     },
     "GQ": {
         "en": "Equatorial Guinea",
-        "jp": "赤道ギニア",
-        "cases": 9,
-        "deaths": 0
+        "jp": "赤道ギニア"
     },
     "LR": {
         "en": "Liberia",
-        "jp": "リベリア",
-        "cases": 3,
-        "deaths": 0
+        "jp": "リベリア"
     },
     "TZ": {
-        "en": "United Republic of Tanzania",
-        "jp": "タンザニア",
-        "cases": 12,
-        "deaths": 0
+        "en": "Tanzania",
+        "jp": "タンザニア"
     },
     "SO": {
         "en": "Somalia",
-        "jp": "ソマリア",
-        "cases": 1,
-        "deaths": 0
+        "jp": "ソマリア"
     },
     "BJ": {
         "en": "Benin",
-        "jp": "ベナン",
-        "cases": 6,
-        "deaths": 0
+        "jp": "ベナン"
     },
     "BS": {
         "en": "Bahamas",
-        "jp": "バハマ",
-        "cases": 5,
-        "deaths": 0
+        "jp": "バハマ"
     },
     "ME": {
         "en": "Montenegro",
-        "jp": "モンテネグロ",
-        "cases": 52,
-        "deaths": 1
+        "jp": "モンテネグロ"
     },
     "KG": {
         "en": "Kyrgyzstan",
-        "jp": "キルギス",
-        "cases": 44,
-        "deaths": 0
+        "jp": "キルギス"
     },
     "ZM": {
         "en": "Zambia",
-        "jp": "ザンビア",
-        "cases": 12,
-        "deaths": 0
+        "jp": "ザンビア"
     },
     "DJ": {
         "en": "Djibouti",
-        "jp": "ジブチ",
-        "cases": 11,
-        "deaths": 0
+        "jp": "ジブチ"
     },
     "GM": {
         "en": "Gambia",
-        "jp": "ガンビア",
-        "cases": 3,
-        "deaths": 1
+        "jp": "ガンビア"
     },
     "MU": {
         "en": "Mauritius",
-        "jp": "モーリシャス",
-        "cases": 48,
-        "deaths": 2
+        "jp": "モーリシャス"
     },
     "FJ": {
         "en": "Fiji",
-        "jp": "フィジー",
-        "cases": 5,
-        "deaths": 0
+        "jp": "フィジー"
     },
     "SV": {
         "en": "El Salvador",
-        "jp": "エルサルバドル",
-        "cases": 9,
-        "deaths": 0
+        "jp": "エルサルバドル"
     },
     "TD": {
         "en": "Chad",
-        "jp": "チャド",
-        "cases": 3,
-        "deaths": 0
+        "jp": "チャド"
     },
     "NI": {
         "en": "Nicaragua",
-        "jp": "ニカラグア",
-        "cases": 2,
-        "deaths": 0
+        "jp": "ニカラグア"
     },
     "MG": {
         "en": "Madagascar",
-        "jp": "マダガスカル",
-        "cases": 19,
-        "deaths": 0
+        "jp": "マダガスカル"
     },
     "HT": {
         "en": "Haiti",
-        "jp": "ハイチ",
-        "cases": 8,
-        "deaths": 0
+        "jp": "ハイチ"
     },
     "AO": {
         "en": "Angola",
-        "jp": "アンゴラ",
-        "cases": 3,
-        "deaths": 0
+        "jp": "アンゴラ"
     },
     "NE": {
         "en": "Niger",
-        "jp": "ニジェール",
-        "cases": 7,
-        "deaths": 0
+        "jp": "ニジェール"
     },
     "PG": {
         "en": "Papua New Guinea",
-        "jp": "パプアニューギニア",
-        "cases": 1,
-        "deaths": 0
+        "jp": "パプアニューギニア"
     },
     "ZW": {
         "en": "Zimbabwe",
-        "jp": "ジンバブエ",
-        "cases": 3,
-        "deaths": 1
+        "jp": "ジンバブエ"
     },
     "CV": {
         "en": "Cabo Verde",
-        "jp": "カーボベルデ",
-        "cases": 4,
-        "deaths": 0
+        "jp": "カーボベルデ"
     },
     "ER": {
         "en": "Eritrea",
-        "jp": "エリトリア",
-        "cases": 4,
-        "deaths": 0
+        "jp": "エリトリア"
     },
     "TL": {
         "en": "Timor-Leste",
-        "jp": "東ティモール",
-        "cases": 1,
-        "deaths": 0
+        "jp": "東ティモール"
     },
     "UG": {
         "en": "Uganda",
-        "jp": "ウガンダ",
-        "cases": 14,
-        "deaths": 0
+        "jp": "ウガンダ"
     },
     "NC": {
         "en": "New Caledonia",
-        "jp": "ニューカレドニア",
-        "cases": 10,
-        "deaths": 0
+        "jp": "ニューカレドニア"
     },
     "SY": {
         "en": "Syria",
-        "jp": "シリア",
-        "cases": 5,
-        "deaths": 0
+        "jp": "シリア"
     },
     "MZ": {
         "en": "Mozambique",
-        "jp": "モザンビーク",
-        "cases": 5,
-        "deaths": 0
+        "jp": "モザンビーク"
     },
     "GD": {
         "en": "Grenada",
-        "jp": "グレナダ",
-        "cases": 1,
-        "deaths": 0
+        "jp": "グレナダ"
     },
     "BZ": {
         "en": "Belize",
-        "jp": "ベリーズ",
-        "cases": 1,
-        "deaths": 0
+        "jp": "ベリーズ"
     },
     "MM": {
         "en": "Myanmar",
-        "jp": "ミャンマー",
-        "cases": 3,
-        "deaths": 0
+        "jp": "ミャンマー"
     },
     "DM": {
         "en": "Dominica",
-        "jp": "ドミニカ国",
-        "cases": 7,
-        "deaths": 0
+        "jp": "ドミニカ国"
     },
     "LA": {
         "en": "Laos",
-        "jp": "ラオス",
-        "cases": 3,
-        "deaths": 0
+        "jp": "ラオス"
     },
     "GW": {
         "en": "Guinea-Bissau",
-        "jp": "ギニアビサウ",
-        "cases": 2,
-        "deaths": 0
+        "jp": "ギニアビサウ"
     },
     "ML": {
         "en": "Mali",
-        "jp": "マリ",
-        "cases": 2,
-        "deaths": 0
+        "jp": "マリ"
     },
     "KN": {
         "en": "Saint Kitts and Nevis",
-        "jp": "セントクリストファー・ネービス",
-        "cases": 2,
-        "deaths": 0
+        "jp": "セントクリストファー・ネービス"
     },
     "LY": {
         "en": "Libya",
-        "jp": "リビア",
-        "cases": 1,
-        "deaths": 0
+        "jp": "リビア"
     },
     "SS": {
         "en": "South Sudan",
-        "jp": "南スーダン",
-        "cases": 0,
-        "deaths": 0
+        "jp": "南スーダン"
     },
     "TM": {
         "en": "Turkmenistan",
-        "jp": "トルクメニスタン",
-        "cases": 0,
-        "deaths": 0
+        "jp": "トルクメニスタン"
     },
     "BW": {
         "en": "Botswana",
-        "jp": "ボツワナ",
-        "cases": 0,
-        "deaths": 0
+        "jp": "ボツワナ"
     },
     "YE": {
         "en": "Yemen",
-        "jp": "イエメン",
-        "cases": 0,
-        "deaths": 0
+        "jp": "イエメン"
     },
     "EH": {
         "en": "Western Sahara",
-        "jp": "西サハラ",
-        "cases": 0,
-        "deaths": 0
+        "jp": "西サハラ"
     },
     "GL": {
         "en": "Greenland",
-        "jp": "グリーンランド",
-        "cases": 0,
-        "deaths": 0
+        "jp": "グリーンランド"
     },
     "LS": {
         "en": "Lesotho",
-        "jp": "レソト",
-        "cases": 0,
-        "deaths": 0
+        "jp": "レソト"
     },
     "KP": {
         "en": "North Korea",
-        "jp": "北朝鮮",
-        "cases": 0,
-        "deaths": 0
+        "jp": "北朝鮮"
     },
     "SB": {
         "en": "Solomon Islands",
-        "jp": "ソロモン諸島",
-        "cases": 0,
-        "deaths": 0
+        "jp": "ソロモン諸島"
     },
     "TW": {
         "en": "Taiwan",
-        "jp": "台湾",
-        "cases": 235,
-        "deaths": 2
+        "jp": "台湾"
     },
     "BI": {
         "en": "Burundi",
-        "jp": "ブルンジ",
-        "cases": 0,
-        "deaths": 0
+        "jp": "ブルンジ"
     },
     "FK": {
         "en": "Falkland Islands",
-        "jp": "フォークランド諸島",
-        "cases": 0,
-        "deaths": 0
+        "jp": "フォークランド諸島"
     },
     "PR": {
         "en": "Puerto Rico",
-        "jp": "プエルトリコ",
-        "cases": 0,
-        "deaths": 0
+        "jp": "プエルトリコ"
     },
     "FO": {
         "en": "Faroe Islands",
-        "jp": "フェロー諸島",
-        "cases": 0,
-        "deaths": 0
+        "jp": "フェロー諸島"
+    },
+    "TJ": {
+        "en": "Tajikistan",
+        "jp": "タジキスタン"
+    },
+    "SL": {
+        "en": "Sierra Leone",
+        "jp": "シエラレオネ"
+    },
+    "MW": {
+        "en": "Malawi",
+        "jp": "マラウイ"
     }
 };
